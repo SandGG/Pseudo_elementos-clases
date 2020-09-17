@@ -1,0 +1,99 @@
+:root {
+    --letra-fuente: Arial;
+    --letra-tamaño: 22px;
+    --letra-color: rgb(126, 122, 122);
+    --color-form: antiquewhite;
+    --color-p: beige;
+}
+
+body{
+    background: rgb(224, 211, 211);
+}
+
+.fparagraph, .sparagraph{
+    font-family: var(--letra-fuente);
+    font-size: var(--letra-tamaño);
+    color: var(--letra-color);
+    position: relative;
+    background: var(--color-p);
+}
+
+.fparagraph::after{
+    content: '';
+    position: absolute;
+    height: 20px;
+    border-left: 15px solid var(--color-p);
+    border-right: 15px solid var(--color-p);
+    border-bottom: 5px solid transparent; 
+    bottom: -20px;
+    
+}
+
+.fparagraph__text, .sparagraph__text{
+    margin: 0;
+}
+
+.fparagraph::before{
+    content: 'Primer parrafo';
+}
+
+.fparagraph::first-letter{
+    color: black;
+}
+
+.sparagraph::first-line{
+    color: blue;
+}
+
+.sparagraph__text::selection{
+    background: black;
+    color: white;
+}
+
+.form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background: var(--color-form);
+    margin: 30px auto;
+    padding: 12px;
+}
+
+.form::after{
+    content: '';
+    position: absolute;
+    border-top: 20px solid var(--color-form);
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    bottom: -40px;
+    left: calc(50% - 20px);
+}
+
+.form__label{
+    font-family: var(--letra-fuente);
+    font-size: var(--letra-tamaño);
+}
+
+.form__input{
+    height: 40px;
+    border-radius: 12px;
+    padding: 0 12px;
+    border: none;
+}
+
+.form__input::placeholder{
+    font-size: 20px;
+}
+
+.form__button{
+    width: 20%;
+    background: white;
+    border-radius: 12px;
+    font-family: var(--letra-fuente);
+    font-size: var(--letra-tamaño);
+    border: none;
+    cursor: pointer;
+}
