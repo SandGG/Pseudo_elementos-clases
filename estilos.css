@@ -6,51 +6,70 @@
     --color-p: beige;
 }
 
-body{
+body {
     background: rgb(224, 211, 211);
 }
 
-.fparagraph, .sparagraph{
+.button {
+    width: 80%;
+    margin: 12px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button input:nth-child(odd){
+    background: pink;
+}
+
+.button:not(input){
+    color: blue;
+}
+
+.fparagraph, .sparagraph {
     font-family: var(--letra-fuente);
     font-size: var(--letra-tamaño);
     color: var(--letra-color);
     position: relative;
     background: var(--color-p);
+    margin: 15px 0;
 }
 
-.fparagraph::after{
+.fparagraph::after {
     content: '';
     position: absolute;
     height: 20px;
     border-left: 15px solid var(--color-p);
     border-right: 15px solid var(--color-p);
     border-bottom: 5px solid transparent; 
-    bottom: -20px;
-    
+    bottom: -20px;  
 }
 
-.fparagraph__text, .sparagraph__text{
+.fparagraph__text, .sparagraph__text {
     margin: 0;
 }
 
-.fparagraph::before{
+.fparagraph::before {
     content: 'Primer parrafo';
 }
 
-.fparagraph::first-letter{
+.fparagraph::first-letter {
     color: black;
 }
 
-.sparagraph::first-line{
+.sparagraph::first-line {
     color: blue;
 }
 
-.sparagraph__text::selection{
+.sparagraph__text::selection {
     background: black;
     color: white;
 }
 
-.form{
+.sparagraph p:first-of-type{
+    color: coral;
+}
+
+.form {
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -61,7 +80,7 @@ body{
     padding: 12px;
 }
 
-.form::after{
+.form::after {
     content: '';
     position: absolute;
     border-top: 20px solid var(--color-form);
@@ -72,23 +91,50 @@ body{
     left: calc(50% - 20px);
 }
 
-.form__label{
+.form__label {
     font-family: var(--letra-fuente);
     font-size: var(--letra-tamaño);
 }
 
-.form__input{
+.form__input {
     height: 40px;
     border-radius: 12px;
     padding: 0 12px;
     border: none;
+    font-family: var(--letra-fuente);
+    font-size: var(--letra-tamaño);
 }
 
-.form__input::placeholder{
+.form input:last-child{
+    background: cadetblue;
+}
+
+.form__input:out-of-range{
+    background: rgba(192, 115, 115, 0.616);
+}
+
+.form__input:out-of-range + .form__label::after{
+    content: ' (valor no valido)';
+}
+
+.form__input:focus {
+    background: rgb(250, 239, 235);
+    color: blue;
+}
+
+.form__input--genero{
+    display: none;
+}
+
+input[id="otro"]:checked ~ .form__input--genero{
+    display: block;
+}
+
+.form__input::placeholder {
     font-size: 20px;
 }
 
-.form__button{
+.form__button {
     width: 20%;
     background: white;
     border-radius: 12px;
@@ -96,4 +142,88 @@ body{
     font-size: var(--letra-tamaño);
     border: none;
     cursor: pointer;
+}
+
+.list {
+    padding: 0 15px;
+    margin: 0;
+    list-style: none;
+}
+
+.list--sub{
+    display: none;
+}
+
+.checkbox{
+    opacity: 0;
+    margin: 0;
+}
+
+.checkbox:checked ~ .list--sub{
+    display: block;
+}
+
+.list__item, .label {
+    font-family: var(--letra-fuente);
+    font-size: var(--letra-tamaño);
+}
+
+.list__link {
+    text-decoration: none;
+}
+
+.list__link:link{
+    color: black;
+}
+
+.list__link:visited{
+    color: purple;
+}
+
+.list__link:hover{
+    color: white;
+    background: black;
+}
+
+.list__link:active{
+    color: black;
+    background: white;
+}
+
+.lightbox {
+    display: none;
+}
+  
+.lightbox:target {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+  
+.lightbox p {
+    width: 80%;
+    height: 30%;
+    position: relative;
+    background-color: cornflowerblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+  
+.lightbox .close::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(70, 70, 107, 0.815);
+    cursor: default;
 }

@@ -7,6 +7,16 @@
         <link href="estilos.css" rel="stylesheet" type="text/css">
     </head>
     <body>
+        <div class="button">
+            <input type="button" value="Otro botón">
+            <input type="button" value="Otro botón">
+            <input type="button" value="Otro botón">
+            <input type="button" value="Otro botón">
+            <input type="button" value="Otro botón">
+            <p>No es un botón</p>
+            <input type="button" value="Otro botón">
+        </div>
+
         <div class="fparagraph">
             <p class="fparagraph__text"> Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
                 Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
@@ -15,14 +25,37 @@
             </p>
         </div>
         <form action="#" method="get" class="form">
-            <label class="form__label" for="fname">Last name:</label>
+            <label class="form__label" for="fname">Apellidos:</label>
             <input class="form__input" id="fname" name="lname" type="text" placeholder="Escribe tus apellidos"><br>
-            <label class="form__label"for="sname">Name</label>
-            <input class="form__input"id="sname" name="fname" type="text" placeholder="Escribe tu(s) nombre(s)"><br>
+            <label class="form__label" for="sname">Nombre (s):</label>
+            <input class="form__input" id="sname" name="fname" type="text" placeholder="Escribe tu(s) nombre(s)"><br>
+            <div>
+                <input type="radio" name="genero" id="mujer" value="mujer">
+                <label class="form__label" for="mujer">Mujer</label><br>
+                <input type="radio" name="genero" id="hombre" value="hombre">
+                <label class="form__label" for="hombre">Hombre</label><br>
+                <input type="radio" name="genero" id="otro" value="otro">
+                <label class="form__label" for="otro">Otro</label><br>
+                <input class="form__input form__input--genero" id="genero" name="genero" type="text" placeholder="Especifica"><br>  
+            </div> 
+            <input class="form__input" type="number" min="1" max="10" value="0" placeholder="Del 1 al 10">
+            <label class="form__label" for="sname">Número</label><br>
             <input class="form__button" type="submit" value="Enviar">
         </form>
         <div class="sparagraph">
-            <p class="sparagraph__text">Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+            <span>Hi</span>
+            <p class="sparagraph__text">Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto 
+                Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+                Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+                Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+                Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+                Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+                Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+                Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+                Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+                Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
+            </p>
+            <p class="sparagraph__text">Más Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto 
                 Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
                 Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
                 Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
@@ -33,6 +66,22 @@
                 Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
                 Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto
             </p>    
+        </div>
+        <ul class="list">
+            <li class="list__item"><a class="list__link" href="#ejem1">Primero</a></li>
+            <li class="list__item"><a class="list__link" href="#">Segundo</a></li>
+            <li>
+                <input class="checkbox" type="checkbox" name="g1" id="g1">
+                <label class="label" for="g1">Tercero</label>
+                <ul class="list list--sub">
+                    <li class="list__item"><a class="list__link" href="#">Cuarto</a></li>
+                    <li class="list__item"><a class="list__link" href="#">Quinto</a></li> 
+                </ul>
+            </li>
+        </ul>
+        <div class="lightbox" id="ejem1">
+            <a href="#" class="close"></a>
+            <p>Hola</p>
         </div>
     </body>
 </html>
